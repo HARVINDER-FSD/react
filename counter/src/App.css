@@ -1,0 +1,15 @@
+h1{
+  text-align: center;
+}
+.inc{
+  background-color: rgb(235, 204, 33);
+  margin-left: 20px;
+}
+.res{
+  background-color: green;
+  margin-left: 20px;
+}
+.dec{
+  background-color: red;
+  margin-left: 20px;
+}
