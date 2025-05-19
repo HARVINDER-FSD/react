@@ -1,0 +1,356 @@
+/* **************** All page css **************** */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-header, .features, .home-footer {
+  animation: fadeIn 1s ease-out;
+}
+
+
+.shop-now-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.shop-now-btn:hover {
+  transform: scale(1.05);
+  background-color: #0056b3;
+}
+
+
+.feature-item {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.feature-item:nth-child(1) {
+  animation: fadeIn 0.8s ease-out 0.2s backwards;
+}
+.feature-item:nth-child(2) {
+  animation: fadeIn 0.8s ease-out 0.4s backwards;
+}
+.feature-item:nth-child(3) {
+  animation: fadeIn 0.8s ease-out 0.6s backwards;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color:#ffd700;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  color: #060303;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.navbar a:hover {
+  color: #e40ab5;
+}
+
+/* **************** Home css **************** */
+
+.home-wrapper {
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  color: #333;
+}
+
+.home-header {
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+}
+
+.home-header h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.home-header p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.shop-now-btn {
+  background-color: #38b2ac;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.shop-now-btn:hover {
+  background-color: #005fa3;
+}
+
+.features {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.feature-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.feature-item {
+  width: 250px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: #f5f5f5;
+}
+
+.feature-item img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.promo {
+  padding: 50px 20px;
+  background-color: #e0f7fa;
+  text-align: center;
+}
+
+.promo-image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+}
+
+.home-footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #333;
+  color: white;
+  margin-top: 114px;
+}  
+
+/* **************** Product.css **************** */
+
+h1 {
+  text-align: center;
+  /* color: #007acc; */
+  margin: 1.5rem 0;
+}
+
+.product-search {
+  /* margin-left: 665px; */
+  text-align: center;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns:  repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.product-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: 0.3s ease-in-out;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.product-card img {
+  border-radius: 8px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.product-card p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.product-card button {
+  margin: 6px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  /* background-color: #007acc;
+  color: white; */
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.product-card button:hover {
+  background-color: #007acc; 
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 2rem auto;
+}
+
+.pagination button {
+  padding: 8px 16px;
+  /* background-color: #007acc;
+  color: white; */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+/* **************** Product Detail css **************** */
+
+.product-details-container {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+}
+
+.product-image {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-info h1 {
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+.product-info p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.add-product {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-grid input, .form-grid button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* **************** Edit Page Css **************** */
+
+.edit-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+  background-color: #f7f7f7;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.edit-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.edit-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.edit-form input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+}
+
+.edit-form button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.edit-form button:hover {
+  background-color: #0056b3;
+}
