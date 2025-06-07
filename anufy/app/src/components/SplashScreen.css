@@ -1,0 +1,704 @@
+/* Enhanced Splash Screen V2 */
+.splash-screen-v2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow: hidden;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Animated Background */
+.animated-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.bg-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.8;
+}
+
+.layer-1 {
+  background: radial-gradient(circle at 20% 80%, #667eea 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, #764ba2 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, #f093fb 0%, transparent 50%);
+  animation: bgMove1 8s ease-in-out infinite;
+}
+
+.layer-2 {
+  background: radial-gradient(circle at 60% 70%, #4facfe 0%, transparent 50%),
+    radial-gradient(circle at 30% 30%, #00f2fe 0%, transparent 50%);
+  animation: bgMove2 10s ease-in-out infinite reverse;
+}
+
+.layer-3 {
+  background: radial-gradient(circle at 70% 30%, #a8edea 0%, transparent 50%),
+    radial-gradient(circle at 20% 60%, #fed6e3 0%, transparent 50%);
+  animation: bgMove3 12s ease-in-out infinite;
+}
+
+/* Particles */
+.particles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  animation: particleFloat 6s linear infinite;
+}
+
+.particle-0 {
+  left: 10%;
+  animation-delay: 0s;
+}
+.particle-1 {
+  left: 20%;
+  animation-delay: 1s;
+}
+.particle-2 {
+  left: 30%;
+  animation-delay: 2s;
+}
+.particle-3 {
+  left: 40%;
+  animation-delay: 3s;
+}
+.particle-4 {
+  left: 50%;
+  animation-delay: 4s;
+}
+
+/* Main Content */
+.splash-content-v2 {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+/* Logo Section */
+.logo-section {
+  margin-bottom: 60px;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.logo-section.revealed {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.logo-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.logo-bg-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: logoGlow 3s ease-in-out infinite alternate;
+}
+
+.logo-main {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-letter {
+  position: relative;
+  z-index: 3;
+}
+
+.letter-a {
+  font-size: 80px;
+  font-weight: 900;
+  background: linear-gradient(45deg, #fff, #f0f8ff, #e6f3ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+  animation: letterPulse 2s ease-in-out infinite alternate;
+}
+
+.letter-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: glowPulse 2s ease-in-out infinite alternate;
+}
+
+.logo-rings {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ring {
+  position: absolute;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ring-1 {
+  width: 120px;
+  height: 120px;
+  animation: ringRotate 8s linear infinite;
+}
+
+.ring-2 {
+  width: 160px;
+  height: 160px;
+  animation: ringRotate 12s linear infinite reverse;
+}
+
+.ring-3 {
+  width: 200px;
+  height: 200px;
+  animation: ringRotate 16s linear infinite;
+}
+
+.logo-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 140px;
+  height: 140px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation: pulseBorder 2s ease-in-out infinite;
+}
+
+/* Brand Section */
+.brand-section {
+  margin-bottom: 80px;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.3s;
+}
+
+.brand-section.revealed {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.brand-name {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.letter-container {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.brand-letter {
+  font-size: 64px;
+  font-weight: 900;
+  background: linear-gradient(45deg, #fff, #f0f8ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transform: translateY(50px);
+  opacity: 0;
+  animation: letterReveal 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  animation-delay: var(--delay);
+}
+
+.brand-underline {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #fff, transparent);
+  margin: 10px auto 0;
+  width: 0;
+  animation: underlineExpand 1s ease-out 0.8s forwards;
+}
+
+.brand-tagline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 300;
+}
+
+.tagline-word {
+  transform: translateY(20px);
+  opacity: 0;
+  animation: wordReveal 0.5s ease-out forwards;
+  animation-delay: var(--delay);
+}
+
+.tagline-separator {
+  opacity: 0.5;
+  animation: fadeIn 0.3s ease-out 1.2s forwards;
+}
+
+/* Loading Section */
+.loading-section {
+  margin-bottom: 40px;
+}
+
+.loading-bar-container {
+  width: 300px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  margin: 0 auto 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.loading-bar {
+  position: relative;
+  height: 100%;
+}
+
+.loading-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+  border-radius: 2px;
+  width: 0;
+  animation: loadingProgress 3s ease-in-out forwards;
+}
+
+.loading-glow {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  border-radius: 4px;
+  animation: loadingGlow 2s ease-in-out infinite;
+}
+
+.loading-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: 300;
+  animation: textFade 2s ease-in-out infinite alternate;
+}
+
+/* Floating Elements V2 */
+.floating-elements-v2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.float-item {
+  position: absolute;
+  animation: floatMove 8s ease-in-out infinite;
+}
+
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  animation: iconFloat 4s ease-in-out infinite alternate;
+}
+
+.item-1 {
+  top: 15%;
+  left: 10%;
+  animation-delay: 0s;
+}
+.item-2 {
+  top: 20%;
+  right: 15%;
+  animation-delay: 1s;
+}
+.item-3 {
+  bottom: 25%;
+  left: 15%;
+  animation-delay: 2s;
+}
+.item-4 {
+  bottom: 30%;
+  right: 10%;
+  animation-delay: 3s;
+}
+.item-5 {
+  top: 60%;
+  left: 8%;
+  animation-delay: 4s;
+}
+.item-6 {
+  top: 70%;
+  right: 12%;
+  animation-delay: 5s;
+}
+
+/* Version Badge */
+.version-badge {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.badge-content {
+  position: relative;
+  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.badge-glow {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), transparent);
+  border-radius: 20px;
+  animation: badgeGlow 3s ease-in-out infinite alternate;
+}
+
+/* Screen Transition */
+.screen-transition {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.transition-layer {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+  opacity: 0;
+}
+
+.splash-screen-v2.outro .transition-layer {
+  animation: fadeOut 0.8s ease-out forwards;
+}
+
+/* Animations */
+@keyframes bgMove1 {
+  0%,
+  100% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+  33% {
+    transform: translateX(-20px) translateY(-20px) rotate(1deg);
+  }
+  66% {
+    transform: translateX(20px) translateY(20px) rotate(-1deg);
+  }
+}
+
+@keyframes bgMove2 {
+  0%,
+  100% {
+    transform: translateX(0) translateY(0) scale(1);
+  }
+  50% {
+    transform: translateX(30px) translateY(-30px) scale(1.1);
+  }
+}
+
+@keyframes bgMove3 {
+  0%,
+  100% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(-30px) translateY(30px) rotate(2deg);
+  }
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translateY(100vh) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) translateX(100px);
+    opacity: 0;
+  }
+}
+
+@keyframes logoGlow {
+  from {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  }
+  to {
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+  }
+}
+
+@keyframes letterPulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes glowPulse {
+  from {
+    opacity: 0.3;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+@keyframes ringRotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes pulseBorder {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.6;
+  }
+}
+
+@keyframes letterReveal {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes underlineExpand {
+  to {
+    width: 200px;
+  }
+}
+
+@keyframes wordReveal {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 0.5;
+  }
+}
+
+@keyframes loadingProgress {
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes loadingGlow {
+  0%,
+  100% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(400%);
+  }
+}
+
+@keyframes textFade {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes floatMove {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(-5deg);
+  }
+  75% {
+    transform: translateY(-30px) rotate(3deg);
+  }
+}
+
+@keyframes iconFloat {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-10px) scale(1.1);
+  }
+}
+
+@keyframes badgeGlow {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .logo-main {
+    width: 120px;
+    height: 120px;
+  }
+
+  .letter-a {
+    font-size: 64px;
+  }
+
+  .brand-letter {
+    font-size: 48px;
+  }
+
+  .brand-tagline {
+    font-size: 16px;
+    gap: 10px;
+  }
+
+  .loading-bar-container {
+    width: 250px;
+  }
+
+  .icon-circle {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-main {
+    width: 100px;
+    height: 100px;
+  }
+
+  .letter-a {
+    font-size: 48px;
+  }
+
+  .brand-letter {
+    font-size: 36px;
+  }
+
+  .brand-tagline {
+    font-size: 14px;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .tagline-separator {
+    display: none;
+  }
+
+  .loading-bar-container {
+    width: 200px;
+  }
+
+  .icon-circle {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
