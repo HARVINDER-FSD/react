@@ -1,0 +1,63 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Alice Johnson",
+      "rollNumber": "2021001",
+      "class": "10th Grade",
+      "email": "alice.johnson@school.edu",
+      "phone": "+1-555-0101",
+      "address": "123 Main St, Springfield, IL"
+    },
+    {
+      "id": 2,
+      "name": "Bob Smith",
+      "rollNumber": "2021002",
+      "class": "11th Grade",
+      "email": "bob.smith@school.edu",
+      "phone": "+1-555-0102",
+      "address": "456 Oak Ave, Springfield, IL"
+    },
+    {
+      "id": 3,
+      "name": "Carol Davis",
+      "rollNumber": "2021003",
+      "class": "10th Grade",
+      "email": "carol.davis@school.edu",
+      "phone": "+1-555-0103",
+      "address": "789 Pine Rd, Springfield, IL"
+    },
+    {
+      "id": 4,
+      "name": "David Wilson",
+      "rollNumber": "2021004",
+      "class": "12th Grade",
+      "email": "david.wilson@school.edu",
+      "phone": "+1-555-0104",
+      "address": "321 Elm St, Springfield, IL"
+    },
+    {
+      "id": 5,
+      "name": "Eva Brown",
+      "rollNumber": "2021005",
+      "class": "11th Grade",
+      "email": "eva.brown@school.edu",
+      "phone": "+1-555-0105",
+      "address": "654 Maple Dr, Springfield, IL"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin123",
+      "role": "administrator"
+    },
+    {
+      "id": 2,
+      "username": "teacher",
+      "password": "teacher123",
+      "role": "teacher"
+    }
+  ]
+}
